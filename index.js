@@ -19,7 +19,7 @@ var myPen = {};
 		this.pX = (pen.canvas.width * 0.5) + (Math.random() * 200) - 100;
 		this.pY = -size - Math.random() * 200;
 		this.vX = 0;
-		this.vY = Math.random();
+		this.vY = Math.random() * 0.5;
 		this.size = size;
 		this.img = pen.particleImg; // Usar la nueva imagen de partículas
 		this.pointer = pen.pointer;
@@ -110,7 +110,7 @@ var myPen = {};
 
 	// init
 	this.particles = [];
-	this.N = 100; // Number of particles
+	this.N = 80; // Number of particles
 	this.pointerImg = new Image();
 	this.pointerImg.src = 'https://res.cloudinary.com/dadp1865s/image/upload/v1732263242/person_in_heart_fadbee.png'; // Pointer image
 
