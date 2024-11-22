@@ -1,13 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Nueva tipografía */
 
 /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body Styling */
 body {
     position: absolute;
     margin: 0;
@@ -15,15 +8,12 @@ body {
     width: 100%;
     height: 100%;
     font-family: 'Roboto', sans-serif; /* Cambié la tipografía */
-    background-color: #f5f5f5;
-    color: #333;
-    text-align: center;
-    line-height: 1.5; /* Mejor separación entre líneas */
 }
 
 html {
     background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.6));
     background-color: #E94E77;
+
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -38,7 +28,6 @@ canvas {
     cursor: none;
 }
 
-/* Opening Screen */
 #opening_screen {
     position: absolute;
     overflow: hidden;
@@ -49,21 +38,18 @@ canvas {
     background: rgba(245, 11, 229, 0.15);
 }
 
-/* Player Container */
 .player_container {
     position: absolute;
-    top: 30px;
+    top: 0;
     right: 5%;
+    top: 30px;
     font-weight: bold;
     text-align: center;
     letter-spacing: 2px;
     z-index: 500;
     opacity: 0.65;
-    display: flex;
-    gap: 10px;
 }
 
-/* Buttons */
 button {
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid #ffffff;
@@ -72,20 +58,26 @@ button {
     text-align: center;
     display: inline-block;
     vertical-align: middle;
+    -webkit-transition: all 0.2s ease 0;
     transition: all 0.2s ease 0;
-    cursor: pointer;
 }
 
 button[data-am-button^="large"] {
     width: 60px;
     height: 60px;
     margin: 0 5px;
-    font-size: 16px;
+}
+
+button[data-am-button^="large"] i {
+    font-size: 25px;
 }
 
 button[data-am-button^="small"] {
     width: 40px;
     height: 40px;
+}
+
+button[data-am-button^="small"] i {
     font-size: 14px;
 }
 
@@ -98,7 +90,6 @@ button:focus {
     outline: none;
 }
 
-/* Progress Bar */
 #progress-bar {
     width: 100%;
     background-color: pink;
@@ -112,10 +103,11 @@ button:focus {
     height: 5px;
     position: absolute;
     left: 0;
+    -webkit-transition: width 2.5s linear 0;
     transition: width 2.5s linear 0;
 }
 
-/* Centered Elements */
+/* Timing */
 .Absolute-Center {
     margin: auto;
     position: absolute;
@@ -125,38 +117,52 @@ button:focus {
     right: 0;
 }
 
-/* Heading Styling */
 h2 {
-    height: auto;
+    height: 60px;
     color: #fff;
-    letter-spacing: 2px;
-    line-height: 1.4;
+    letter-spacing: 10px;
+    line-height: normal;
     text-align: center;
     z-index: 300;
-    margin: 20px auto;
-    padding: 10px;
-    font-size: 2rem; /* Aumenté el tamaño */
-    max-width: 90%;
-    font-family: 'Roboto', sans-serif; /* Nueva tipografía */
+    padding-bottom: 10%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 4em;
+    font-size: 4.5vw;
+    font-family: 'Roboto', sans-serif; /* Cambié la tipografía */
     text-shadow: 0px 3px 0px #b2a98f, 0px 14px 10px rgba(0, 0, 0, 0.15), 0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Animation Classes */
 .hidden {
     display: none;
 }
 
 .animated {
     visibility: visible !important;
+    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
     animation-duration: 3s;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif; /* Nueva tipografía */
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif; /* Cambié la tipografía */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
 }
 
 /* Responsive Design */
