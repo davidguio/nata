@@ -459,12 +459,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "onlyfools1": "Solo los tontos se apresuran",
         "canthelp1": "Pero no puedo evitar",
         "fallinginlove1": "Enamorarme",
-        "withyou1": "De ti",
+        "withyou1": "De ti Natalia",
         "shallistay": "¿Debería quedarme?",
         "beasin": "¿Sería un pecado?",
         "ificanthelp": "Si no puedo evitar",
         "fallinginlove2": "Enamorarme",
-        "withyou2": "De ti",
+        "withyou2": "De ti Natalia",
         "likeariver1": "Como un río fluye",
         "tothesea1": "Seguramente al mar",
         "darlingitgoes1": "Cariño, así es",
@@ -474,7 +474,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "wholelife1": "Toma toda mi vida también",
         "foricanthelp1": "Porque no puedo evitar",
         "fallinginlove3": "Enamorarme",
-        "withyou3": "De ti",
+        "withyou3": "De ti Natalia",
         "likeariver2": "Como un río fluye",
         "tothesea2": "Seguramente al mar",
         "darlingitgoes2": "Cariño, así es",
@@ -484,11 +484,11 @@ document.addEventListener("DOMContentLoaded", function () {
         "wholelife2": "Toma toda mi vida también",
         "foricanthelp2": "Porque no puedo evitar",
         "fallinginlove4": "Enamorarme",
-        "withyou4": "De ti",
+        "withyou4": "De ti Natalia",
         "foricanthelp3": "Porque no puedo evitar",
         "fallinginlove5": "Enamorarme",
-        "withyou5": "De ti",
-        "bemine": "Feliz día de San Valentín"
+        "withyou5": "De ti Natalia",
+      
     };
 
     // Añadir las traducciones a los elementos <h2>
