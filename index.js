@@ -19,7 +19,7 @@ var myPen = {};
 		this.pX = (pen.canvas.width * 0.5) + (Math.random() * 200) - 100;
 		this.pY = -size - Math.random() * 200;
 		this.vX = 0;
-		this.vY = Math.random() * 0.5;
+		this.vY = Math.random() * 0.3;
 		this.size = size;
 		this.img = pen.particleImg; // Usar la nueva imagen de partículas
 		this.pointer = pen.pointer;
@@ -30,7 +30,7 @@ var myPen = {};
 	Particle.prototype.run = function () {
 		this.pY += this.vY;
 		this.pX += this.vX;
-		this.vY += 0.1;
+		this.vY += 0.02;
 
 		if (this.pY > this.canvas.height) {
 			this.pY = -this.size;
