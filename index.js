@@ -133,7 +133,7 @@ var myPen = {};
 	// init
 
 	this.particles = [];
-	this.N = 800;
+	this.N = 200;
 	this.img = new Image();
 	this.img.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/heart_codepen.png';
 
