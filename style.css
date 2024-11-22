@@ -103,7 +103,7 @@ button:focus {
 h2 {
 	height: 80px;
 	color: #fff;
-	letter-spacing: 4px;
+	letter-spacing: 2px;
 	line-height: normal;
 	text-align: center;
 	z-index: 300;
@@ -114,8 +114,8 @@ h2 {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	font-size: 6em;
-	font-size: 6.5vw;
+	font-size: 8em;
+	font-size: 8.5vw;
 	
 	
 }
