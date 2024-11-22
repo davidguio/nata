@@ -475,7 +475,7 @@ audioElement.addEventListener('timeupdate', function(e) {
 document.addEventListener("DOMContentLoaded", function () {
     // Traducciones al español
     const translations = {
-        "wisemensay": "Los sabios dicen",
+        "wisemensay": "Los hombres sabios dicen",
         "onlyfools1": "Solo los tontos se apresuran",
         "canthelp1": "Pero no puedo evitar",
         "fallinginlove1": "Enamorarme",
