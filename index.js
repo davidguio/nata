@@ -135,7 +135,7 @@ var myPen = {};
 	this.particles = [];
 	this.N = 100;
 	this.img = new Image();
-	this.img.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/heart_codepen.png';
+	this.img.src = 'https://res.cloudinary.com/dadp1865s/image/upload/v1732263242/person_in_heart_fadbee.png';
 
 	for (var i = 0; i < this.N; i++) {
 		this.particles[i] = new Particle(this, 35);
