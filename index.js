@@ -1,46 +1,33 @@
 
-
-//BY ADEBAYO MOSES
-
 var myPen = {};
 
-(function() {
-
+(function () {
 	'use strict';
 
 	// main loop
-
-	this.run = function() {
-
+	this.run = function () {
 		this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-		this.ctx.drawImage(this.img, this.pointer.x - 100, this.pointer.y - 100, 200, 200);
+		this.ctx.drawImage(this.pointerImg, this.pointer.x - 100, this.pointer.y - 100, 200, 200);
 
 		for (var i = 0; i < this.N; i++) {
-
 			this.particles[i].run();
-
 		}
-
-	}
+	};
 
 	// particles class
-
-	var Particle = function(pen, size) {
-
+	var Particle = function (pen, size) {
 		this.pX = (pen.canvas.width * 0.5) + (Math.random() * 200) - 100;
 		this.pY = -size - Math.random() * 200;
 		this.vX = 0;
 		this.vY = Math.random();
 		this.size = size;
-		this.img = pen.img;
+		this.img = pen.particleImg; // Usar la nueva imagen de partículas
 		this.pointer = pen.pointer;
 		this.canvas = pen.canvas;
 		this.ctx = pen.ctx;
+	};
 
-	}
-
-	Particle.prototype.run = function() {
-
+	Particle.prototype.run = function () {
 		this.pY += this.vY;
 		this.pX += this.vX;
 		this.vY += 0.1;
@@ -58,7 +45,6 @@ var myPen = {};
 			d = dx * dx + dy * dy;
 
 		if (d < r * r) {
-
 			d = Math.sqrt(d);
 			dx /= d;
 			dy /= d;
@@ -71,44 +57,37 @@ var myPen = {};
 
 			this.vX = 0.5 * dx + ((this.pX >= this.pointer.x) ? 2 : -2);
 			this.vY = 0.5 * dy;
-
 		}
 
 		this.ctx.drawImage(this.img, this.pX - this.size * 0.5, this.pY - this.size * 0.5, this.size, this.size);
-
-	}
+	};
 
 	// canvas
-
 	this.canvas = {
-
 		elem: document.createElement('canvas'),
 
-		resize: function() {
+		resize: function () {
 			this.width = this.elem.width = this.elem.offsetWidth;
 			this.height = this.elem.height = this.elem.offsetHeight;
 		},
 
-		init: function() {
+		init: function () {
 			var ctx = this.elem.getContext('2d');
 			document.body.appendChild(this.elem);
 			window.addEventListener('resize', this.resize.bind(this), false);
 			this.resize();
 			return ctx;
 		}
-
 	};
 
 	this.ctx = this.canvas.init();
 
 	// pointer
-
-	this.pointer = (function(canvas) {
-
+	this.pointer = (function (canvas) {
 		var pointer = {
 			x: canvas.width / 2,
 			y: canvas.height / 2,
-			pointer: function(e) {
+			pointer: function (e) {
 				var touchMode = e.targetTouches,
 					pointer;
 				if (touchMode) {
@@ -120,22 +99,23 @@ var myPen = {};
 			},
 		};
 
-		window.addEventListener('mousemove', function(e) {
+		window.addEventListener('mousemove', function (e) {
 			this.pointer(e);
 		}.bind(pointer), false);
-		canvas.elem.addEventListener('touchmove', function(e) {
+		canvas.elem.addEventListener('touchmove', function (e) {
 			this.pointer(e);
 		}.bind(pointer), false);
 		return pointer;
-
 	}(this.canvas));
 
 	// init
-
 	this.particles = [];
-	this.N = 100;
-	this.img = new Image();
-	this.img.src = 'https://res.cloudinary.com/dadp1865s/image/upload/v1732263242/person_in_heart_fadbee.png';
+	this.N = 100; // Number of particles
+	this.pointerImg = new Image();
+	this.pointerImg.src = 'https://res.cloudinary.com/dadp1865s/image/upload/v1732263242/person_in_heart_fadbee.png'; // Pointer image
+
+	this.particleImg = new Image();
+	this.particleImg.src = 'https://res.cloudinary.com/dadp1865s/image/upload/v1732263863/person_in_heart_2_wnhyxk.png'; // Replace with your particle image URL
 
 	for (var i = 0; i < this.N; i++) {
 		this.particles[i] = new Particle(this, 35);
@@ -147,8 +127,8 @@ var myPen = {};
 		requestAnimationFrame(run);
 		myPen.run();
 	})();
-
 }).apply(myPen);
+
 
 // END CANVAS HEARTS
 
