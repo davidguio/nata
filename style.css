@@ -382,9 +382,52 @@ opacity: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
 
- img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 0px auto;
- }
+ img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+ /* Responsive Design */
+@media (max-width: 768px) {
+    /* Smaller Screens (Tablets and Mobile Landscape) */
+    h2 {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    button i {
+        font-size: 1rem;
+    }
+
+    #progress-bar {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smallest Screens (Mobile Portrait) */
+    h2 {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    button {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    button i {
+        font-size: 0.8rem;
+    }
+
+    #progress-bar {
+        max-width: 250px;
+    }
+}
