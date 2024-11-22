@@ -101,9 +101,9 @@ button:focus {
 	right: 0;
 }
 h2 {
-	height: 80px;
+	height: 100px;
 	color: #fff;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	line-height: normal;
 	text-align: center;
 	z-index: 300;
@@ -114,8 +114,8 @@ h2 {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	font-size: 8em;
-	font-size: 8.5vw;
+	font-size: 10em;
+	font-size: 10.5vw;
 	
 	
 }
